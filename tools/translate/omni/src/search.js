@@ -16,12 +16,17 @@ var Search = React.createClass({
       return null;
     }
     var results = [];
+    var lowerQuery = this.state.query.toLowerCase();
     for (const section of this.props.script) {
       for (var ii = 0; ii < section.length; ii++) {
-        if (section[ii][this.state.option].includes(this.state.query)) {
-          results.push(<p>{section.name}: {ii}</p>);
+        var value = section[ii][this.state.option] || '';
+        if (value.toLowerCase().includes(lowerQuery)) {
+          results.push(<p key={`${section.name}-${ii}`}>{section.name}: {ii}</p>);
         }
       }
+    }
+    if (!results.length) {
+      return <p className="text-muted">No matching lines found.</p>;
     }
     return React.createElement('div', {className: 'search-results'}, ...results);
   },
