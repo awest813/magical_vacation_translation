@@ -1,6 +1,6 @@
-.PHONY: all clean
+.PHONY: all clean check
 
-all:
+all: check
 	rm -f hacked.gba hacked.ups
 	cp original.gba hacked.gba
 
@@ -34,3 +34,6 @@ all:
 	bin/armips.exe text_positioning/menu/menu.S
 	bin/armips.exe text_positioning/battle_text/battle_text.S
 	bin/armips.exe misc/name_select.S
+
+check:
+	python3 tools/analyze_text.py
