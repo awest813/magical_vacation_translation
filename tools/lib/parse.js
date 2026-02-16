@@ -30,7 +30,7 @@ var characterWidths = [
 function computeWidth(s) {
   var width = 0
   for (var ii = 0; ii < s.length; ii++) {
-    width += charWidths[s[ii]];
+    width += (charWidths[s[ii]] || 0);
   }
   return width;
 }
