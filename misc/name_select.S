@@ -1,15 +1,17 @@
 .gba
 .open "hacked.gba", 0x08000000
 
+FN_NAME_SELECT_MAP_INDEX equ 0x0880A000
+FN_BACKSPACE_HANDLER equ 0x0880D000
+
 ; Map an index x to 11*(x/9) + x%9 so that the
 ; correct letter is used for a name.
 .org 0x080A65B2
 ; Not enough room here so branching to custom code.
-; TODO: This address needs to be remapped at the end.
-ldr r0, =0x0880A000
+ldr r0, =FN_NAME_SELECT_MAP_INDEX
 mov r15, r0
 .pool
-.org 0x0880A000
+.org FN_NAME_SELECT_MAP_INDEX
 ldrh r0, [r7]
 mov r1, 0x9
 mov r2, r3 ; Save r3
@@ -121,11 +123,10 @@ lsl r1, r1, 0x12
 .org 0x080A96D6
 mov r1, 0xFF
 .org 0x080A96DE
-; TODO: Remap these addresses at the end.
-ldr r0, =0x0880D000
+ldr r0, =FN_BACKSPACE_HANDLER
 mov r15, r0
 .pool
-.org 0x0880D000
+.org FN_BACKSPACE_HANDLER
 L_loop:
 mov r1, r3
 mov r0, r9
