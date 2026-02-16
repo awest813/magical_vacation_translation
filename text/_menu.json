@@ -4022,7 +4022,7 @@
       ]
     },
     {
-      "English": "",
+      "English": "Person\ff\ff",
       "Japanese": "人\\ff\\ff",
       "Comments": "",
       "u8": [
@@ -4044,7 +4044,7 @@
       ]
     },
     {
-      "English": "]",
+      "English": "Male",
       "Japanese": "男\\ff\\ff",
       "Comments": "This translates to the male symbol in the font.",
       "u8": [
@@ -4055,7 +4055,7 @@
       ]
     },
     {
-      "English": "[",
+      "English": "Female",
       "Japanese": "女\\ff\\ff",
       "Comments": "This translates to the female symbol in the font.",
       "u8": [

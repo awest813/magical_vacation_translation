@@ -1,7 +1,7 @@
 [
   [
     {
-      "English": "",
+      "English": "None",
       "Japanese": "なし",
       "Comments": "",
       "u8": [
@@ -19264,7 +19264,7 @@
   ],
   [
     {
-      "English": "",
+      "English": "Male",
       "Japanese": "♂",
       "Comments": "",
       "u8": [
@@ -19287,7 +19287,7 @@
       ]
     },
     {
-      "English": "",
+      "English": "Female",
       "Japanese": "♀",
       "Comments": "",
       "u8": [
@@ -19310,7 +19310,7 @@
       ]
     },
     {
-      "English": "",
+      "English": "Unknown",
       "Japanese": "?",
       "Comments": "",
       "u8": [
