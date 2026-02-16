@@ -16,14 +16,14 @@ function readJSON(e) {
     document.getElementById('japanese_search').disabled = false;
     document.getElementById('english_search').disabled = false;
 
-    document.getElementById('max_number').innerHTML = battle_text.length - 1;
+    document.getElementById('max_number').textContent = battle_text.length - 1;
     document.getElementById('number').max = battle_text.length - 1;
     document.getElementById('number').value = 0;
     number = 0;
 
     // Called each time so that updates to the parsing are reflected.
     generateJapanese(battle_text);
-    document.getElementById('japanese').innerHTML = battle_text[number].Japanese;
+    document.getElementById('japanese').textContent = battle_text[number].Japanese;
     document.getElementById('english').value = battle_text[number].English;
     document.getElementById('comments').value = battle_text[number].Comments;
   };
@@ -99,20 +99,24 @@ function exportBinary() {
 
 function japanese_search() {
   var text = document.getElementById('japanese_search_text').value;
-  document.getElementById('search_results').innerHTML = '';
+  var searchResults = document.getElementById('search_results');
+  searchResults.textContent = '';
   for (var ii = 0; ii < battle_text.length; ii++) {
     if (battle_text[ii].Japanese.indexOf(text) != -1) {
-      document.getElementById('search_results').innerHTML += ii + '<br>';
+      searchResults.appendChild(document.createTextNode(ii));
+      searchResults.appendChild(document.createElement('br'));
     }
   }
 }
 
 function english_search() {
   var text = document.getElementById('english_search_text').value;
-  document.getElementById('search_results').innerHTML = '';
+  var searchResults = document.getElementById('search_results');
+  searchResults.textContent = '';
   for (var ii = 0; ii < battle_text.length; ii++) {
     if (battle_text[ii].English.indexOf(text) != -1) {
-      document.getElementById('search_results').innerHTML += ii + '<br>';
+      searchResults.appendChild(document.createTextNode(ii));
+      searchResults.appendChild(document.createElement('br'));
     }
   }
 }
@@ -165,7 +169,7 @@ document
 document
   .getElementById('number')
   .addEventListener('change', function(e) {
-    document.getElementById('japanese').innerHTML = battle_text[number].Japanese;
+    document.getElementById('japanese').textContent = battle_text[number].Japanese;
     document.getElementById('english').value = battle_text[number].English;
     document.getElementById('comments').value = battle_text[number].Comments;
   }, false);
@@ -195,7 +199,7 @@ function heartBeat() {
   var newNumber = parseInt(document.getElementById('number').value, 10);
   if (number != newNumber) {
     number = newNumber;
-    document.getElementById('japanese').innerHTML = battle_text[number].Japanese;
+    document.getElementById('japanese').textContent = battle_text[number].Japanese;
     document.getElementById('english').value = battle_text[number].English;
     document.getElementById('comments').value = battle_text[number].Comments;
   }
