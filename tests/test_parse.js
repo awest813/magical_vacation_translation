@@ -38,8 +38,37 @@ function testComputeWidth() {
   console.log("testComputeWidth passed!");
 }
 
+function testProcessSpecialCharacters() {
+  console.log("Running testProcessSpecialCharacters...");
+
+  // Test normal characters
+  assert.strictEqual(processSpecialCharacters("abc"), "abc");
+
+  // Test hex escapes
+  assert.strictEqual(processSpecialCharacters("\\8e"), String.fromCharCode(0x8e));
+  assert.strictEqual(processSpecialCharacters("\\00"), String.fromCharCode(0x00));
+  assert.strictEqual(processSpecialCharacters("\\ff"), String.fromCharCode(0xff));
+
+  // Test newlines (should be ignored)
+  assert.strictEqual(processSpecialCharacters("a\nb\nc"), "abc");
+
+  // Test alignment character '|'
+  assert.strictEqual(processSpecialCharacters("|"), String.fromCharCode(0x101));
+
+  // Test reset alignment character '`'
+  assert.strictEqual(processSpecialCharacters("`"), String.fromCharCode(0x102));
+
+  // Test mixed input
+  const input = "A\\8eB|C`D\nE";
+  const expected = "A" + String.fromCharCode(0x8e) + "B" + String.fromCharCode(0x101) + "C" + String.fromCharCode(0x102) + "DE";
+  assert.strictEqual(processSpecialCharacters(input), expected);
+
+  console.log("testProcessSpecialCharacters passed!");
+}
+
 try {
   testComputeWidth();
+  testProcessSpecialCharacters();
   console.log("All tests passed!");
 } catch (err) {
   console.error("Test failed!");
