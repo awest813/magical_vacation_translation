@@ -121,40 +121,6 @@ function english_search() {
   }
 }
 
-function readBinary(e) {
-  var file = e.target.files[0]; // FileList object
-  var fileReader = new FileReader();
-  fileReader.onload = function (e) {
-    binary = new Uint8Array(e.target.result);
-    generateJSON(binary);
-  };
-  fileReader.readAsArrayBuffer(file);
-}
-
-function generateJSON(binary) {
-  battle_text = [];
-  for (var ii = 2; ii < 0xBA/2; ii++) {
-    var text = {
-      English: '',
-      Japanese: '',
-      Comments: '',
-      u8: []
-    };
-    var o1 = binary[2*ii] + (binary[2*ii + 1] << 8);
-    var o2;
-    if (ii + 1 == 0xBA/2) {
-      o2 = binary.length - 1;
-    } else {
-      o2 = binary[2*ii + 2] + (binary[2*ii + 3] << 8);
-    }
-    for (var jj = 0; jj < o2 - o1; jj++) {
-      text.u8.push(binary[o1 + jj]);
-    }
-    battle_text.push(text);
-  }
-  document.getElementById('export_json').disabled = false;
-}
-
 document.getElementById('json')
   .addEventListener('change', readJSON, false);
 
