@@ -40,12 +40,12 @@ function substituteMacros(english) {
   var strings = english.split("$");
   if (strings.length % 2 == 0) {
     console.log("Missing terminating '$' in text '" + english + "'");
-    return;
+    return english;
   }
   for (var ii = 1; ii < strings.length; ii += 2) {
     if (!glossary[strings[ii]]) {
       console.log ("Glossary name '" + strings[ii] + "' doesn't exist!");
-      return;
+      return english;
     }
     strings[ii] = glossary[strings[ii]];
   }
@@ -53,8 +53,8 @@ function substituteMacros(english) {
 }
 
 function insertLineBreaks(line, newlineInsert) {
-  words = line.split(" ");
-  widths = []
+  var words = line.split(" ");
+  var widths = []
   words.forEach(function (w) {
     var width = 0;
     for (var ii = 0; ii < w.length; ii++) {
@@ -68,11 +68,11 @@ function insertLineBreaks(line, newlineInsert) {
         } else if (w[ii+1] == "8" && w[ii+2] == "7") {
         // Item control code.
           ii += 3;
-          var n = parseInt(w.substring(ii+1, ii+3), 16);
+          var n = parseInt(w.substring(ii, ii+2), 16);
           width += itemWidths[n] + 18; // + 18 for icon
         } else if (w[ii+1] == "8" && w[ii+2] == "6") {
           ii += 3;
-          var n = parseInt(w.substring(ii+1, ii+3), 16);
+          var n = parseInt(w.substring(ii, ii+2), 16);
           width += characterWidths[n];
         }
         ii += 2;
@@ -150,7 +150,6 @@ function processSpecialCharacters(english) {
 
 function parseEnglish(english) {
   //english = String.fromCharCode(0x1F, 0x00) + english + String.fromCharCode(0x101, 0xFF, 0xFF);
-  var ii = 0;
   var alignment = 0;
   var parsed = [];
   for (var ii = 0; ii < english.length; ii++) {
