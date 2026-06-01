@@ -159649,7 +159649,7 @@
   },
   {
     "Japanese": "[space][space]\\83トルーナ村<br>[space][space]\\83メース、だめ<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Toruna Village<br>[space][space]\\83Mace, No Good<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Toruna Village<br>[space][space]\\83Mace Fails<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -159706,7 +159706,7 @@
   },
   {
     "Japanese": "[space][space]\\83殺人事件発生<br>[space][space]\\83メース決心<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Murder Case Occurs<br>[space][space]\\83Mace Resolves<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Murder Case Begins<br>[space][space]\\83Mace Resolves<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -159763,7 +159763,7 @@
   },
   {
     "Japanese": "[space][space]\\83ミルフィーユの案内・村<br>[space][space]\\83メース、しおしお<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Millefeuille Guide: Village<br>[space][space]\\83Mace Is Downcast<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Millefeuille Guide: Village<br>[space][space]\\83Mace Dejected<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -159911,7 +159911,7 @@
   },
   {
     "Japanese": "[space][space]\\83ミルフィーユの案内・ボス<br>[space][space]\\83どーどーラスト<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Millefeuille Guide: Boss<br>[space][space]\\83Do-do Last<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Millefeuille Guide: Boss<br>[space][space]\\83Dodo Finale<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -159984,7 +159984,7 @@
   },
   {
     "Japanese": "[space][space]\\83トルーナでの結まつ<br>[space][space]\\83ガナッシュ組、シードル脱落<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Conclusion in Toruna<br>[space][space]\\83Ganache Team, Cidre Out<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Toruna Conclusion<br>[space][space]\\83Ganache Group, Cidre Out<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -160063,7 +160063,7 @@
   },
   {
     "Japanese": "[space][space]\\83文鳥ケ原<br>[space][space]\\83セサミ仲間<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Buncho Plains<br>[space][space]\\83Sesame Joins<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Bunting Plains<br>[space][space]\\83Sesame Joins<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -160116,7 +160116,7 @@
   },
   {
     "Japanese": "[space][space]\\83ガトーの家<br>[space][space]\\83エニグマの森で<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Gateau's House<br>[space][space]\\83In Enigma Forest<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Gateau Home<br>[space][space]\\83In Enigma Forest<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -160252,7 +160252,7 @@
   },
   {
     "Japanese": "[space][space]\\83ムスコのけいこく<br>[space][space]\\83きょーふのツボ空間<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Son's Warning<br>[space][space]\\83Terrifying Pot Space<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Son's Warning<br>[space][space]\\83Vase of Terror Space<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -160321,7 +160321,7 @@
   },
   {
     "Japanese": "[space][space]\\83ペシュ、仲間に<br>[space][space]\\83<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Peche Joins<br>[space][space]\\83<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Pesce Joins<br>[space][space]\\83<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -160474,7 +160474,7 @@
   },
   {
     "Japanese": "[space][space]\\83ブッチーネ３せい<br>[space][space]\\83<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Buttine 3 Siblings<br>[space][space]\\83<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Buttine III<br>[space][space]\\83<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,
@@ -160778,7 +160778,7 @@
   },
   {
     "Japanese": "[space][space]\\83魔バス<br>[space][space]\\83<br>[space][space]\\83キャンセル\\84",
-    "English": "[space][space]\\83Magic Bus<br>[space][space]\\83<br>[space][space]\\83Cancel\\84",
+    "English": "[space][space]\\83Demon Bus<br>[space][space]\\83<br>[space][space]\\83Cancel\\84",
     "Comments": "DEBUG MENU / UNUSED CONTENT",
     "u8": [
       0,

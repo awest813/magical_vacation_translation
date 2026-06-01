@@ -1,24 +1,65 @@
-NOTE: This is out of date. I'm allowing things to spill past 0x087FFFFF for now
-      and then repacking everything at the end.
+# Magical Vacation Translation (Active Fork)
 
+This repository is an **active fork** focused on improving the English translation and overall playability of *Magical Vacation* (GBA).
 
-Allocation of extra memory from 0x087DF750 to 0x087FFFFF
-`0x087DF750 -- 0x087E2110`: Monster names
-`0x087E2110 -- 0x087E5950`: Place names
-`0x087E5950 -- 0x087F5950`: Bestiary descriptions
-`0x087F5950 -- 0x087F59B0`: Custom newline control character function
-`0x087F59B0 -- 0x087F5A10`: VWF menu clear tiles function
-`0x087F5A10 -- 0x087F5BB0`: Main VWF menu function
-`0x087F5BB0 -- 0x087F5C30`: x-coordinate update function for VWF sprite
-`0x087F5C30 -- 0x087F5F30`: VWF script handlers
-`0x087F5F30 -- 0x087F6130`: Main VWF script function
-`0x087F6130 -- 0x087F6330`: VWF sprite function
+## Project status
 
-Layout of game:
-`0x08106320 -- 0x0810655B`: Table for overworld character sprites. Each entry
-  in the table is 4 bytes. The first 2 represent some information about the
-  sprite (unsure what). The last 2 are address offsets for the sprite.
-`0x0810655C -- 0x0813FC3B`: Overworld sprites
-`0x08151928 -- 0x08224E50`: Battle sprites. Before each set of sprites is some
-  meta-data, presumably for the animation.
-`0x084B06E0 -- 0x0851DBE0 or so`: I suspect this is music.
+✅ Active maintenance is happening in this fork.
+
+Current focus areas:
+- improving English script quality (clarity, consistency, tone)
+- fixing text rendering/layout issues (line breaks, overflow, spacing)
+- updating UI/menu text where translation quality is weak
+- documenting and tracking in-game glitches that affect translated content
+
+## What this fork is trying to fix
+
+The main goal is to make the English experience feel polished and coherent by iterating on:
+- story dialogue and cutscene text
+- battle text and system messages
+- names/terms consistency across tools and in-game strings
+- visual text glitches (misalignment, clipping, odd wrapping)
+
+## Build overview
+
+From the repository root:
+
+```bash
+make
+```
+
+The build process assembles graphics/text patches into `hacked.gba` (starting from your local `original.gba`) and also regenerates translation-related binary assets.
+
+## Translation/editor tools
+
+This repo includes browser-based helper tools under `tools/translate/` for working on script/menu/battle text data.
+
+Typical local workflow:
+1. Run a static server in repo root.
+2. Open the desired tool in a browser (for example, a page under `tools/translate/`).
+3. Export data and rebuild with `make`.
+4. Test in emulator and note any glitches/regressions.
+
+## Glitch triage (translation-related)
+
+If you notice glitches while testing, please prioritize reporting these:
+- text overflows outside message windows
+- broken line wrapping or newline behavior
+- missing glyphs/characters
+- menu labels overlapping icons or borders
+- inconsistent terminology between menus, battle text, and dialogue
+
+When reporting, include:
+- where it happens (location/menu/battle/cutscene)
+- screenshot if possible
+- emulator + save state context
+- expected vs actual text
+
+## Notes
+
+- This repository does **not** distribute the original game ROM.
+- You must provide your own legally obtained `original.gba` for local builds.
+
+---
+
+If you want, the next step can be creating a dedicated `GLITCHES.md` tracker in this fork so active issues are easier to organize and fix.

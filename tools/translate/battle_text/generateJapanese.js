@@ -71,7 +71,7 @@ function generateJapanese(script) {
   var control_characters = {
     // Newline
     0x80:function(state) {
-      state.text += '<br>';
+      state.text += '\n';
       state.idx++;
     },
     // TODO: Unknown control character
@@ -143,10 +143,10 @@ function generateJapanese(script) {
     // Reset text to normal.
     0x8D:function(state) {
       if (state.color) {
-        state.text += '</span>';
+        state.text += '[/]';
       }
       if (state.italics) {
-        state.text += '</i>';
+        state.text += '[/I]';
       }
       state.color = '';
       state.italics = false;
@@ -155,19 +155,19 @@ function generateJapanese(script) {
     // Set text color to red.
     0x8E:function(state) {
       if (state.color) {
-        state.text += '</span>';
+        state.text += '[/]';
       }
       state.color = 'red';
-      state.text += '<span class="red">';
+      state.text += '[RED]';
       state.idx++;
     },
     // Set text color to blue.
     0x8F:function(state) {
       if (state.color) {
-        state.text += '</span>';
+        state.text += '[/]';
       }
       state.color = 'blue';
-      state.text += '<span class="blue">';
+      state.text += '[BLUE]';
       state.idx++;
     },
     // TODO: Unknown control character
@@ -178,7 +178,7 @@ function generateJapanese(script) {
     // Set text to italics
     0x91:function(state) {
       state.italics = true;
-      state.text += '<i>';
+      state.text += '[I]';
       state.idx++;
     },
     // TODO: Unknown control character

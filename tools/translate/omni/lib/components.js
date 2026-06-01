@@ -12,6 +12,8 @@ var _search = require('./search.js');
 
 var _search2 = _interopRequireDefault(_search);
 
+var _common = require('./common.js');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MagicalTranslator = React.createClass({
@@ -19,17 +21,31 @@ var MagicalTranslator = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      script: null
+      script: null,
+      loadError: null
     };
   },
   handleScriptSelectChange: function handleScriptSelectChange(e) {
     var _this = this;
 
+    var file = e.target.files.item(0);
+    if (!file) {
+      return;
+    }
+
     var reader = new FileReader();
     reader.addEventListener("loadend", function () {
-      _this.setState({ script: JSON.parse(reader.result) });
+      try {
+        var parsedScript = JSON.parse(reader.result);
+        _this.setState({ script: parsedScript, loadError: null });
+      } catch (error) {
+        _this.setState({
+          script: null,
+          loadError: 'Unable to parse JSON from ' + file.name + '.'
+        });
+      }
     });
-    reader.readAsText(e.target.files.item(0));
+    reader.readAsText(file);
   },
   handleScriptChange: function handleScriptChange(script) {
     this.setState({ script: script });
@@ -39,11 +55,16 @@ var MagicalTranslator = React.createClass({
       'div',
       { className: 'row' },
       React.createElement(Sidebar, { script: this.state.script }),
-      React.createElement('div', { className: 'col-md-10' })
+      React.createElement(
+        'div',
+        { className: 'col-md-10' },
+        React.createElement(MainPanel, { script: this.state.script })
+      )
     );
   },
   renderScriptSelector: function renderScriptSelector() {
-    return React.createElement(ScriptSelector, { callback: this.handleScriptSelectChange });
+    return React.createElement(ScriptSelector, { callback: this.handleScriptSelectChange,
+      loadError: this.state.loadError });
   },
   render: function render() {
     return this.state.script ? this.renderMain() : this.renderScriptSelector();
@@ -57,13 +78,94 @@ var ScriptSelector = React.createClass({
     return React.createElement(
       'form',
       null,
+      React.createElement(_common.Alert, { message: this.props.loadError }),
       React.createElement(
         'label',
         null,
         'Select script JSON file:'
       ),
       React.createElement('input', { className: 'form-control', type: 'file',
-        onChange: this.props.callback })
+        accept: 'application/json,.json',
+        onChange: this.props.callback }),
+      React.createElement(
+        'p',
+        { className: 'help-block' },
+        'Load a translated JSON script to enable export tools and search.'
+      )
+    );
+  }
+});
+
+
+var MainPanel = React.createClass({
+  displayName: 'MainPanel',
+
+  scriptStats: function scriptStats() {
+    var sectionCount = this.props.script.length;
+    var lineCount = this.props.script.reduce(function (count, section) {
+      return count + section.length;
+    }, 0);
+    var translatedCount = this.props.script.reduce(function (count, section) {
+      return count + section.filter(function (line) {
+        return line.translation && line.translation.trim();
+      }).length;
+    }, 0);
+
+    return { sectionCount: sectionCount, lineCount: lineCount, translatedCount: translatedCount };
+  },
+  render: function render() {
+    var stats = this.scriptStats();
+
+    return React.createElement(
+      'div',
+      { className: 'main-panel' },
+      React.createElement(
+        'h3',
+        null,
+        'Script overview'
+      ),
+      React.createElement(
+        'p',
+        { className: 'text-muted' },
+        'Use the sidebar to export your script or search across source text, translations, and comments.'
+      ),
+      React.createElement(
+        'ul',
+        null,
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'strong',
+            null,
+            'Sections:'
+          ),
+          ' ',
+          stats.sectionCount
+        ),
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'strong',
+            null,
+            'Total lines:'
+          ),
+          ' ',
+          stats.lineCount
+        ),
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'strong',
+            null,
+            'Translated lines:'
+          ),
+          ' ',
+          stats.translatedCount
+        )
+      )
     );
   }
 });

@@ -20,6 +20,7 @@ FN_RAM_CLEAR equ 0x0800D020
 FN_VWF equ 0x0800D060
 
 FN_SCRIPT_WRAPPER equ 0x08810000
+FN_SCRIPT_BOX_SETUP equ 0x08810100
 
 .macro pushreg
   push r4-r7,lr
@@ -65,10 +66,10 @@ FN_SCRIPT_WRAPPER equ 0x08810000
 ; 0x0800B564 is called to load up a dialogue box. We modify the routine to
 ; clean ram also.
 .org 0x0800B564
-ldr r3, =0x08810100 ;TODO: remap this address
+ldr r3, =FN_SCRIPT_BOX_SETUP
 mov r15, r3
 .pool
-.org 0x08810100
+.org FN_SCRIPT_BOX_SETUP
 push r4-r7,r14
 mov r7, r8
 push r7

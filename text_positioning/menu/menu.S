@@ -2,6 +2,7 @@
 .open "hacked.gba", 0x08000000
 
 FN_BG1_TEXT equ 0x080B57D8
+FN_MAP_REALM_NAMES equ 0x0880FEE0
 
 ;;;;;;;;;;;;;;;;;;
 ; BG 1 MENU TEXT ;
@@ -313,35 +314,8 @@ mov r0, r6
 ; Map page
 .org 0x080AADF4 ; "Valencia Beach", "Light Realm", "Dark Realm", "Abyssal Realm"
 ; Not enough space so making a jump
-; TODO: Remap address at the end.
-ldr r0, =0x880FEE0
+ldr r0, =FN_MAP_REALM_NAMES
 mov r15, r0
-.pool
-.org 0x0880FEE0
-mov r3, 0x01
-neg r3, r3
-mov r0, 0xE4
-str r0, [sp, 0x00]
-mov r0, 0x0F
-str r0, [sp, 0x04]
-mov r0, 0x01
-str r0, [sp, 0x08]
-str r7, [sp, 0x0C]
-; [r4] = 0 for valencia, 1 for light, 2 for dark, 3 for abyssal
-ldrb r1, [r4]
-mov r0, 0x6A ; "Valencia Beach"
-cmp r1, 0x00
-beq L1
-mov r0, 0x72 ; "Light Realm"
-cmp r1, 0x01
-beq L1
-mov r0, 0x74 ; "Dark Realm"
-cmp r1, 0x02
-beq L1
-mov r0, 0x6C ; "Abyssal Realm"
-L1:
-ldr r1, =0x080AAE12
-mov r15, r1
 .pool
 
 ; Current realm's map
@@ -429,5 +403,33 @@ mov r0, 0x28
 
 .org 0x08016886 ; Spirit icons in spells in battle
 mov r0, 0x5E
+
+.org FN_MAP_REALM_NAMES
+L_map_realm_names:
+mov r3, 0x01
+neg r3, r3
+mov r0, 0xE4
+str r0, [sp, 0x00]
+mov r0, 0x0F
+str r0, [sp, 0x04]
+mov r0, 0x01
+str r0, [sp, 0x08]
+str r7, [sp, 0x0C]
+; [r4] = 0 for valencia, 1 for light, 2 for dark, 3 for abyssal
+ldrb r1, [r4]
+mov r0, 0x6A ; "Valencia Beach"
+cmp r1, 0x00
+beq @@L1
+mov r0, 0x72 ; "Light Realm"
+cmp r1, 0x01
+beq @@L1
+mov r0, 0x74 ; "Dark Realm"
+cmp r1, 0x02
+beq @@L1
+mov r0, 0x6C ; "Abyssal Realm"
+@@L1:
+ldr r1, =0x080AAE12
+mov r15, r1
+.pool
 
 .close

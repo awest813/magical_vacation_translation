@@ -43,3 +43,7 @@
   vertical-align: top;
   resize: none;
 }
+
+.main-panel {
+  padding: 10px 20px;
+}

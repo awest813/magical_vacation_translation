@@ -88,26 +88,6 @@ function exportBinary() {
   console.log('Exported binary and offsets!');
 }
 
-function japanese_search() {
-  var text = document.getElementById('japanese_search_text').value;
-  document.getElementById('search_results').innerHTML = '';
-  for (var ii = 0; ii < script.length; ii++) {
-    if (script[ii].Japanese.indexOf(text) != -1) {
-      document.getElementById('search_results').innerHTML += ii + '<br>';
-    }
-  }
-}
-
-function english_search() {
-  var text = document.getElementById('english_search_text').value;
-  document.getElementById('search_results').innerHTML = '';
-  for (var ii = 0; ii < script.length; ii++) {
-    if (script[ii].English.indexOf(text) != -1) {
-      document.getElementById('search_results').innerHTML += ii + '<br>';
-    }
-  }
-}
-
 function parseEnglish(english) {
   var parsed = [];
   var ii = 0;
@@ -150,22 +130,24 @@ function parseEnglish(english) {
 
 function japanese_search() {
   var text = document.getElementById('japanese_search_text').value;
-  document.getElementById('search_results').innerHTML = '';
+  var results = '';
   for (var ii = 0; ii < menus[section].length; ii++) {
     if (menus[section][ii].Japanese.indexOf(text) != -1) {
-      document.getElementById('search_results').innerHTML += ii + '<br>';
+      results += ii + '<br>';
     }
   }
+  document.getElementById('search_results').innerHTML = results;
 }
 
 function english_search() {
   var text = document.getElementById('english_search_text').value;
-  document.getElementById('search_results').innerHTML = '';
+  var results = '';
   for (var ii = 0; ii < menus[section].length; ii++) {
     if (menus[section][ii].English.indexOf(text) != -1) {
-      document.getElementById('search_results').innerHTML += ii + '<br>';
+      results += ii + '<br>';
     }
   }
+  document.getElementById('search_results').innerHTML = results;
 }
 
 function readBinary(e) {
