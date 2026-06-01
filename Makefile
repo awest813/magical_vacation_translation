@@ -10,7 +10,6 @@ all: check
 	bin/grit/grit.exe graphics/yuujou/yuujou.bmp -gB4 -p! -m! -fh! -ftb -Zl -q -o graphics/yuujou/yuujou
 	bin/grit/grit.exe graphics/name_select/name_select.bmp -gB4 -p! -m! -fh! -ftb -q -o graphics/name_select/name_select
 
-
 	bin/armips.exe graphics/menu_headers/menu_headers.S
 	bin/armips.exe graphics/graphics.S
 	bin/armips.exe text_rendering/fonts/fonts.S

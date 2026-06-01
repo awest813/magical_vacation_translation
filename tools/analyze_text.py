@@ -94,13 +94,6 @@ def check_script_json():
             print(f"Error at index {i}: Unbalanced macro '$': {english}")
             errors += 1
 
-        # Check for invalid control codes
-        # Assuming \xx is the format
-        for match in CONTROL_CODE_REGEX.finditer(english):
-            code = int(match.group(1), 16)
-            # You can add logic to validate specific codes if needed
-            pass
-
         # Check for suspicious content
         if "TODO" in english or "FIXME" in english:
             print(f"Warning at index {i}: 'TODO' or 'FIXME' found in text: {english[:50]}...")
