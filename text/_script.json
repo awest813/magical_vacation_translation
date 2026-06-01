@@ -114831,7 +114831,7 @@
   },
   {
     "Japanese": "\\8b\\ccココット<br>「<span class=\"red\">シール</span>ってのはね、精霊の絵が<br>[space]描かれた<span class=\"red\">シール</span>のことさ。<br>[space]<span class=\"red\">属性シール</span>とも言うんだ。<br>[space]使い方はカンタン！<br>[space]体にペタっとはるだけ！<br>[space]<span class=\"red\">シールをはるだけで、<br>[space]その属性の攻撃に対して、<br>[space]ちょびっと強くなる</span>んだ。<br>[space]バトルで魔法を使った時も、<span class=\"red\">その<br>[space]属性のシールがはってあると、<br>[space]経験値がちょっと増える</span>！<br>[space]つーまーりー、木の魔法を早く<br>[space]覚えたい人は、木の<span class=\"red\">シール</span>を<br>[space]体にはればいいのさ！<br>[space]同じ種類の<span class=\"red\">シール</span>を何枚も<br>[space]はってもいいし、いろんな種類の<br>[space]<span class=\"red\">シール</span>をベタベタはってもいい。<br>[space]<span class=\"red\">シール</span>の使い方は自由さ。",
-    "English": "Cocotte$n$\n@$red$Stickers$black$ have pictures of spirits drawn on them. They're also called $red$elemental stickers$black$.$n$\nIt's easy to use them! Just stick them on your body!$n$\n$red$Just by sticking them on your body, you'll become a bit stronger against attacks of that element$black$.$n$\nAnd when you use magic in battle, $red$if you have a sticker of that element stuck on, you'll receive a bit more magic experience$black$!$n$\nSoooo, if someone wants to quickly learn wood magic, they should stick on a $red$Conifer Sticker$black$! You can stick on many copies of the same $red$sticker$black$ or you can stick on all sorts of different $red$stickers$black$. It's up to you how to use  them.",
+    "English": "Cocotte$n$\n@$red$Stickers$black$ have pictures of spirits drawn on them. They're also called $red$elemental stickers$black$.$n$\nIt's easy to use them! Just stick them on your body!$n$\n$red$Just by sticking them on your body, you'll become a bit stronger against attacks of that element$black$.$n$\nAnd when you use magic in battle, $red$if you have a sticker of that element stuck on, you'll receive a bit more magic experience$black$!$n$\nSoooo, if someone wants to quickly learn wood magic, they should stick on a $red$Conifer Sticker$black$! You can stick on many copies of the same $red$sticker$black$ or you can stick on all sorts of different $red$stickers$black$. It's up to you how to use them.",
     "Comments": "",
     "u8": [
       139,
@@ -129323,7 +129323,7 @@
   },
   {
     "Japanese": "\\8b\\bfメース<br>「やぁ。<br>[space]さっきはどうも。<br>[space]なんだか、はずかしいところを<br>[space]見られちゃったな。",
-    "English": "$メース$$n$\n@Hey.$pause$ Sorry for before. You guys saw me do something embarrassing. ",
+    "English": "$メース$$n$\n@Hey.$pause$ Sorry for before. You guys saw me do something embarrassing.",
     "Comments": "",
     "u8": [
       139,
@@ -155843,7 +155843,7 @@
   },
   {
     "Japanese": "\\8b\\95石の精霊・フリント<br>「持ってないでごっつんかー！！<br>[space]ざんねんでごっつーん！！",
-    "English": "Rocky$n$\n@Pow! You don't have enough!$n$\nPow! How disappointing! ",
+    "English": "Rocky$n$\n@Pow! You don't have enough!$n$\nPow! How disappointing!",
     "Comments": "",
     "u8": [
       139,
@@ -221260,7 +221260,7 @@
   },
   {
     "Japanese": "\\8b\\a4ツリーマン<br>「森の奥に、<span class=\"red\">こんにゃく様</span>の住む<br>[space]<span class=\"red\">クガンデ村</span>があったんだけど‥‥<br>[space]みんないなくなっちゃったんだ。",
-    "English": "Treeman$n$\n@Further inside the forest there's the $red$$クガンデ村$$black$ where the $red$traveling putties$black$ live...$n$\nBut they've all disappeared. ",
+    "English": "Treeman$n$\n@Further inside the forest there's the $red$$クガンデ村$$black$ where the $red$traveling putties$black$ live...$n$\nBut they've all disappeared.",
     "Comments": "",
     "u8": [
       139,
@@ -237541,7 +237541,7 @@
   },
   {
     "Japanese": "\\8b\\12\\86\\8(Lemon)<br>「先生、なんか、<br>[space]スゴイ魔法使いましたね?<br>[space]あれって、光の魔法?<br>[space]先生って、光系だったんだ。",
-    "English": "\\86\\08$n$\n@$Miss Madeleine$, you used some amazing magic didn't you?$n$\nIs that light magic? So you're a light user... ",
+    "English": "\\86\\08$n$\n@$Miss Madeleine$, you used some amazing magic didn't you?$n$\nIs that light magic? So you're a light user...",
     "Comments": "",
     "u8": [
       139,
@@ -245715,7 +245715,7 @@
   },
   {
     "Japanese": "\\8b\\d\\86\\3(Blueberry)<br>「魔法学校のなりたちがエニグマの<br>[space]力によるものでしょ?<br>[space]グラン・ドラジェがエニグマに<br>[space]力をもらって、物質界に魔法を<br>[space]もたらしたの。<br>[space]だから、魔法学校とエニグマが<br>[space]ごたごたしてるのが世間に<br>[space]知れると、マズいんじゃない?",
-    "English": "\\86\\03$n$\n@The origin of Will-o'-Wisp Academy was due to the Enigma's power.$n$\nPrincipal Biscotti received their power and used it to bring magic to the material world.$n$\nIt'd be bad if people found out that Will-o'-Wisp Academy and the Enigmas were connected. ",
+    "English": "\\86\\03$n$\n@The origin of Will-o'-Wisp Academy was due to the Enigma's power.$n$\nPrincipal Biscotti received their power and used it to bring magic to the material world.$n$\nIt'd be bad if people found out that Will-o'-Wisp Academy and the Enigmas were connected.",
     "Comments": "",
     "u8": [
       139,
@@ -368002,7 +368002,7 @@
   },
   {
     "Japanese": "\\8b\\cfマッドマン<br>「オムザネイルさえいなければ<br>[space]この町も平和なんだなっす。<br>[space]誰にでも<span class=\"red\">\\87\\11</span>を<br>[space]あげてたころのように<br>[space]もどれるんだなっす。",
-    "English": "Mudman$n$\n@This village would be nice and peaceful if only $オムザネイル$ were gone.$n$\nIf he were gone, we'd be able to freely give anyone $red$|\\87\\11$black$s. ",
+    "English": "Mudman$n$\n@This village would be nice and peaceful if only $オムザネイル$ were gone.$n$\nIf he were gone, we'd be able to freely give anyone $red$|\\87\\11$black$s.",
     "Comments": "",
     "u8": [
       139,
