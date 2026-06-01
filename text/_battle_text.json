@@ -165,7 +165,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "B",
     "Japanese": "฿",
     "Comments": "",
     "u8": [
@@ -1043,7 +1043,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Strong",
     "Japanese": "得意",
     "Comments": "",
     "u8": [
@@ -1186,7 +1186,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "When the other player is ready,<br>press the A Button.<br>B: Menu, R: Title",
     "Japanese": "相手も通信の用意ができたら<br>Aボタンを押してください。<br>Bでメニュー、Rでタイトル",
     "Comments": "",
     "u8": [
@@ -1273,7 +1273,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "HP+",
     "Japanese": "HP＋",
     "Comments": "",
     "u8": [
@@ -1286,7 +1286,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "MP+",
     "Japanese": "MP＋",
     "Comments": "",
     "u8": [
@@ -1299,7 +1299,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Power+",
     "Japanese": "ちから＋",
     "Comments": "",
     "u8": [
@@ -1314,7 +1314,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Defense+",
     "Japanese": "まもり＋",
     "Comments": "",
     "u8": [
@@ -1329,7 +1329,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Spirit+",
     "Japanese": "精神＋",
     "Comments": "",
     "u8": [
@@ -1342,7 +1342,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Speed+",
     "Japanese": "速さ＋",
     "Comments": "",
     "u8": [
@@ -1490,7 +1490,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "increased.",
     "Japanese": "になった",
     "Comments": "",
     "u8": [
@@ -1505,7 +1505,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Your stats rose from the hot spring!!",
     "Japanese": "温泉の効能で能力が上がった！！",
     "Comments": "",
     "u8": [
@@ -1542,7 +1542,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "HP and MP were restored",
     "Japanese": "HP、MPが回復した",
     "Comments": "",
     "u8": [
@@ -1569,7 +1569,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "[space][space][space]Title:\\98<br>[space][space][space][space]\\95 Wins[space]\\96 Losses",
     "Japanese": "[space][space][space]称号：\\98<br>[space][space][space][space]\\95勝[space]\\96敗",
     "Comments": "",
     "u8": [
@@ -1606,7 +1606,7 @@
     ]
   },
   {
-    "English": "",
+    "English": "Communication was disconnected",
     "Japanese": "通信が切断されました",
     "Comments": "",
     "u8": [
