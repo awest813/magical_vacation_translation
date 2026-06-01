@@ -25,6 +25,7 @@ var Search = React.createClass({
       return null;
     }
     var results = [];
+    var lowerQuery = this.state.query.toLowerCase();
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -34,10 +35,11 @@ var Search = React.createClass({
         var section = _step.value;
 
         for (var ii = 0; ii < section.length; ii++) {
-          if (section[ii][this.state.option].includes(this.state.query)) {
+          var value = section[ii][this.state.option] || '';
+          if (value.toLowerCase().includes(lowerQuery)) {
             results.push(React.createElement(
               'p',
-              null,
+              { key: section.name + '-' + ii },
               section.name,
               ': ',
               ii
@@ -58,6 +60,14 @@ var Search = React.createClass({
           throw _iteratorError;
         }
       }
+    }
+
+    if (!results.length) {
+      return React.createElement(
+        'p',
+        { className: 'text-muted' },
+        'No matching lines found.'
+      );
     }
 
     return (_React = React).createElement.apply(_React, ['div', { className: 'search-results' }].concat(results));
